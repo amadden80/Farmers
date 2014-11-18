@@ -1,0 +1,20 @@
+<h1>Farmereieio</h1>
+
+<div class='farmers'>
+</div>
+
+<script charset="utf-8">
+
+  var farmerListeieio = new FarmerList({modelConstructor: Farmer});
+  var farmerListVieweieio;
+
+  $(function(){
+    farmerListVieweieio = new FarmerListView({
+      collection: farmerListeieio,
+      $el: $('div.farmers'),
+      modelView: FarmerView
+    });
+    farmerListeieio.fetch();
+  })
+
+</script>
